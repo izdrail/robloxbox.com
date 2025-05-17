@@ -6,8 +6,8 @@ import { Icon } from "astro-icon/components";
 import Hobbies from "../portfolio/Hobbies.astro";
 
 const  {
-  profileImage = "/images/efeeleprofile.webp",
-  profileAlt = "Photo of Fernando Aldair López Ponce (EFEELE) for the blog",
+  profileImage = "https://i.imgur.com/sX3NwEO.png",
+  profileAlt = " The Roblox Box AI isn't just a toy—it's an investment in a child's future. Built for interactive, screen-friendly learning, it lets kids explore creativity, logic, and storytelling with trusted content.",
   profileLink = "/about-me",
   profileTitle = "FrontEnd Developer",
   profileName = "Fernando López",
@@ -61,38 +61,35 @@ const  {
           <span
             class="before:mr-2 before:block before:h-1.5 before:w-1.5 before:rounded-full before:bg-green-400 before:shadow-[0px_0px_0px_3px_rgba(34,_197,_94,_0.5)] before:animate-pulse before:content-['']"
           ></span>
-          Available for work
+          Available for pre-order
         </span>
 
         <h1
           class="text-4xl font-black leading-none text-blacktext  dark:text-white max-xl:text-3xl max-lg:text-2xl  max-sm:text-center"
         >
-          {profileName} 👋
+          The Smart Toy Every Grandparent Is Buying Their Grandkids in 2025
         </h1>
         <p
           class="mb-0 text-lg font-semibold leading-8 text-blacktext dark:text-gray-200 max-xl:text-base"
         >
           <span
             class="bg-gradient-to-r from-riptide-500 to-mint-500 bg-clip-text font-black text-transparent   dark:from-riptide-300 dark:to-mint-200"
-            >{profileTitle}</span
+            >
+            Roblox Box
+            </span
           > with <span
             class="bg-gradient-to-r from-riptide-500 to-mint-500 bg-clip-text font-black text-transparent  dark:from-riptide-300 dark:to-mint-200"
-            >8 years of experience</span
-          >, passionate about development, technology, and coffee that sparks ideas. I love bringing digital projects to life. 🚀☕
+            >8 years +</span
+          >,  The Roblox Box AI isn't just a toy—it's an investment in a child's future. Built for interactive, screen-friendly learning, it lets kids explore creativity, logic, and storytelling with trusted content.
         </p>
 
-        <div class="flex gap-4 max-sm:flex-col max-sm:items-center">
+        <div class="flex gap-4 max-sm:flex-col max-sm:items-end">
           <Button
             link={"mailto:" + email}
-            text="Contact Me"
+            text="Pre-Order"
             iconName="envelope"
           />
-          <Button
-            link={profileLink}
-            text="About Me"
-            iconName="person"
-            variant="dark"
-          />
+         
         </div>
       </div>
     </div>
