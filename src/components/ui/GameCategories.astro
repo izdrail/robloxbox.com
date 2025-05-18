@@ -1,0 +1,79 @@
+---
+export const categories = [
+  "Action",
+  "Adventure",
+  "Education",
+  "Entertainment",
+  "Obby & Platformer",
+  "Party & Casual",
+  "Puzzle",
+  "RPG",
+  "Roleplay & Avatar Sim",
+  "Shooter",
+  "Shopping",
+  "Simulation",
+  "Social",
+  "Sports & Racing",
+  "Strategy",
+  "Survival",
+  "Utility & Other"
+];
+
+export function getDescription(category) {
+  const map = {
+    Action: "Get your adrenaline rush in fast-paced, reflex-heavy games. 挑战你的反应能力！",
+    Adventure: "Embark on immersive quests and fantasy storylines. 冒险时刻已来临！",
+    Education: "Play and learn — math, science, logic and more. 学+玩最棒 combo!",
+    Entertainment: "Sit back, chill, and vibe with casual experiences. 放松一下~",
+    "Obby & Platformer": "Jump, climb, and race through tricky courses. 上啊！🧗",
+    "Party & Casual": "Easy, fast, fun — best for groups and friends.",
+    Puzzle: "Think sharp, solve smart. 拼图爱好者的天堂 🧠",
+    RPG: "Grind, loot, and boss battles — full RPG goodness!",
+    "Roleplay & Avatar Sim": "Act, dress, build your world — create your role.",
+    Shooter: "Competitive FPS, target shooting and action bangers. 开枪就是爽！",
+    Shopping: "Style your avatar, buy fits, and flex. 🛍️",
+    Simulation: "Farm, fly, build cities — realistic sim worlds.",
+    Social: "Chat, emote, and meet players. 社交场所来了！",
+    "Sports & Racing": "Cars, football, skating — compete to win.",
+    Strategy: "Plan ahead and outsmart the meta. 超级烧脑！",
+    Survival: "Craft, survive, and conquer dangerous worlds. 🌲",
+    "Utility & Other": "Unique tools and creations you didn’t expect.",
+  };
+  return map[category] || "Explore unique experiences in this category.";
+}
+
+// Optional props for filtering, theming, etc
+const { title = "Roblox Game Categories" } = Astro.props;
+---
+
+<section class="max-w-6xl mx-auto px-4 py-10" aria-label="Roblox Game Categories">
+  <header class="mb-8 text-center">
+    <h2 class="text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">
+      🎮 {title}
+    </h2>
+    <p class="mt-2 text-lg text-gray-600 dark:text-gray-300">
+      Roblox BOX - Explore every genre — action, puzzle, RPG, and more. Разнообразие无限！
+    </p>
+  </header>
+
+  <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+    {categories.map(category => (
+      <article
+        class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl shadow hover:shadow-md transition-all p-6"
+        itemscope
+        itemtype="https://schema.org/CreativeWork"
+      >
+        <h3
+          class="text-xl font-bold text-blue-600 dark:text-blue-400 mb-2"
+          itemprop="headline"
+        >
+          {category}
+        </h3>
+        <p class="text-sm text-gray-700 dark:text-gray-300" itemprop="description">
+          {getDescription(category)}
+        </p>
+        <meta itemprop="genre" content={category} />
+      </article>
+    ))}
+  </div>
+</section>

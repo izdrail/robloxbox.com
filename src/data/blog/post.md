@@ -1,8 +1,9 @@
 ---
-title: "Wellkomena - Dooplo - Gaming Website HTML Template"
+title: "Wellkomena - Education - Kids Toys"
+type: "Education"
 ---
 
 
-# BMW
+# x
 
 

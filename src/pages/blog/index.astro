@@ -3,20 +3,21 @@ import Layout from "../../layouts/Layout.astro";
 import Hero from "../../components/blog/Hero.astro";
 import Tags from "../../components/blog/Tags.astro";
 import ListPosts from "../../components/blog/ListPosts.astro";
-const pageTitle = "Web Development and Technology Blog | Fernando López | EFEELE";
-const description = "Welcome to my blog, where I share my passion for frontend development, web design, and the latest technology trends.";
+const pageTitle = "Discover the latest toy roblox all the roblox box games in a box";
+const description = "Roblox (/ˈroʊblɒks/, ROH-bloks) — это типа онлайн платформа и game dev система, созданная Roblox Corporation. Она даёт тебе возможность 直接用Lua编程, создавать свои игры, и кайфовать в играх от других юзеров. The OGs David Baszucki 和 Erik Cassel запустили проект в 2004 году, а в паблик он вылетел в 2006.";
 const ogimage ={
     url: "/images/blogimage.webp",
-    alt: "EFEELE.dev logo with green background and light effect. Text: 'Web Development and Technology Blog' and URL 'www.efeele.dev'."
+    alt: "Roblox (/ˈroʊblɒks/, ROH-bloks) — это типа онлайн платформа и game dev система, созданная Roblox Corporation. Она даёт тебе возможность 直接用Lua编程, создавать свои игры, и кайфовать в играх от других юзеров. The OGs David Baszucki 和 Erik Cassel запустили проект в 2004 году, а в паблик он вылетел в 2006."
 };
 ---
 
 <Layout  pageTitle={pageTitle} description={description} ogimage={ogimage}>
    
     <Hero />
-    <Tags />
+
     <div class="px-8 max-sm:px-4">
         <ListPosts />
     </div>
 
+    
 </Layout>

@@ -3,22 +3,22 @@ import "../styles/global.css";
 import Header from "../components/layout/Header.astro";
 import Footer from "../components/layout/Footer.astro";
 import  SpeedInsights  from "@vercel/speed-insights/astro"
+import GameCategories from "../components/ui/GameCategories.astro";
 const {
-  pageTitle = "NeonMint by EFEELE 🚀",
-  description = "Welcome to NeonMint by EFEELE, where I develop software and share knowledge.",
+  pageTitle = "Roblox box - educational toy for kids age 8+🚀",
+  description = "Roblox BOX – every genre you crave, all in one place! From explosive Action to brainy Puzzles, social chills to RPG thrills. 🎮 游戏世界等你探索! Разнообразие игр тебя удивит — open, play, repeat.",
   ogimage = {
     url: "/images/imagedefault.webp",
-    alt: "Default image of EFEELE",
+    alt: "Roblox box",
   },
 } = Astro.props;
 
 const siteUrl = new URL(Astro.url).origin;
 const SEO = {
-  sitename: "NeonMint by EFEELE🚀",
+  sitename: "Robo",
   url: siteUrl,
-  locale: "en_US",
-  author: "Fernando Lopez | EFEELE",
-  twitter: "@efeeledev",
+  locale: "en_GB",
+  author: "Stefan Bogdan",
 };
 
 
@@ -32,7 +32,7 @@ const twitterimage = `${siteUrl}${ogimage.url}`;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>{pageTitle}</title>
+    <title>{pageTitle} | robloxbox.com</title>
     <!-- Favicon for different platforms -->
     <link rel="icon" href="/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" href="/favicon-16x16.png" sizes="16x16" />
@@ -64,13 +64,15 @@ const twitterimage = `${siteUrl}${ogimage.url}`;
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={twitterimage} />
     <meta name="twitter:image:alt" content={ogimage.alt} />
-    <meta name="twitter:site" content={SEO.twitter} />
+
   
     <meta name="theme-color" content="#0E0E11"/>
 
     <!-- Sitemap -->
     <link rel="sitemap" href="/sitemap-index.xml" />
-    
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.2.1/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.2.1/dist/flowbite.min.js"></script>
+
   </head>
   <body class="overflow-x-hidden">
     <SpeedInsights/>
@@ -80,11 +82,14 @@ const twitterimage = `${siteUrl}${ogimage.url}`;
       class="fixed top-0 left-0 w-full h-full pointer-events-none -z-1"
     >
     </div>
+
     <Header />
 
     <div class="min-h-[85vh] ">
       <slot />
     </div>
+    
+    <GameCategories />
 
     <Footer />
     <script>
